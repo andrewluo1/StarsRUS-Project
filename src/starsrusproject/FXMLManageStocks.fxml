@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="starsrusproject.ManageStocksController">
+   <children>
+      <Button fx:id="homeButton" layoutX="490.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleHomeButtonAction" prefHeight="37.0" prefWidth="96.0" text="HOME" />
+      <Text layoutX="33.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Stock Price : " wrappingWidth="174.6708984375">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="stockComboBox" layoutX="204.0" layoutY="117.0" prefHeight="31.0" prefWidth="96.0" />
+      <Text layoutX="308.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TO : $" wrappingWidth="55.833984375">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="priceField" layoutX="364.0" layoutY="117.0" prefHeight="31.0" prefWidth="68.0" />
+      <Button fx:id="confirmButton" layoutX="442.0" layoutY="114.0" mnemonicParsing="false" onAction="#handleConfirmButtonAction" prefHeight="37.0" prefWidth="118.0" text="CONFIRM" />
+      <Button fx:id="openMarketButton" layoutX="33.0" layoutY="171.0" mnemonicParsing="false" onAction="#handleOpenMarketButtonAction" prefHeight="45.0" prefWidth="534.0" text="Open Market For the Day" />
+      <Button fx:id="closeMarketButton" layoutX="33.0" layoutY="230.0" mnemonicParsing="false" onAction="#handleCloseMarketButtonAction" prefHeight="45.0" prefWidth="534.0" text="Close Market For the Day" />
+      <Text layoutX="50.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Stocks" wrappingWidth="307.6708984375">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="datePicker" layoutX="33.0" layoutY="291.0" prefHeight="45.0" prefWidth="218.0" />
+      <Button fx:id="changeDateButton" layoutX="278.0" layoutY="291.0" mnemonicParsing="false" onAction="#handleChangeDateButtonAction" prefHeight="45.0" prefWidth="289.0" text="Change Date" />
+      <Label fx:id="label" alignment="CENTER" layoutX="113.0" layoutY="78.0" prefHeight="21.0" prefWidth="366.0" textFill="#1ccd43" />
+   </children>
+</AnchorPane>

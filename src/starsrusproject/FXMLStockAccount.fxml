@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="starsrusproject.StockAccountController">
+   <children>
+      <TableView fx:id="stocksTable" layoutX="16.0" layoutY="56.0" prefHeight="188.0" prefWidth="569.0">
+      </TableView>
+      <Text layoutX="14.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Stocks" wrappingWidth="355.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Button fx:id="backButton" layoutX="510.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="31.0" prefWidth="73.0" text="BACK" />
+      <Text layoutX="16.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sell Stock : " wrappingWidth="129.6708984375">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="stockComboBox" layoutX="103.0" layoutY="271.0" onAction="#handleSelectStock" prefHeight="31.0" prefWidth="83.0" />
+      <Text layoutX="378.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QTY :" wrappingWidth="59.45849609375">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="quantityField" layoutX="423.0" layoutY="269.0" prefHeight="31.0" prefWidth="52.0" />
+      <Button fx:id="confirmButton" layoutX="486.0" layoutY="270.0" mnemonicParsing="false" onAction="#handleConfirmButtonAction" prefHeight="31.0" prefWidth="96.0" text="CONFIRM" />
+      <Button fx:id="stockTransactionHistoryButton" layoutX="17.0" layoutY="344.0" mnemonicParsing="false" onAction="#handleStockHistoryButtonAction" prefHeight="42.0" prefWidth="569.0" text="VIEW TRANSACTION HISTORY" />
+      <Label fx:id="errorLabel" alignment="CENTER" layoutX="79.0" layoutY="312.0" prefHeight="21.0" prefWidth="443.0" textFill="#ee0000" />
+      <Text layoutX="192.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="At purchase price:" wrappingWidth="82.6708984375" />
+      <ComboBox fx:id="ppComboBox" layoutX="275.0" layoutY="271.0" prefHeight="31.0" prefWidth="96.0" />
+   </children>
+</AnchorPane>

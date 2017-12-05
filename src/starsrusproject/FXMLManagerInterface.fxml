@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="starsrusproject.ManagerInterfaceController">
+   <children>
+      <Text layoutX="54.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, " wrappingWidth="122.6708984375">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Label fx:id="nameLabel" layoutX="163.0" layoutY="43.0" prefHeight="45.0" prefWidth="275.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="logoutButton" layoutX="451.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleLogoutButtonAction" prefHeight="45.0" prefWidth="116.0" text="LOGOUT" />
+      <Button fx:id="custumersButton" layoutX="54.0" layoutY="135.0" mnemonicParsing="false" onAction="#handleCustomersButtonAction" prefHeight="45.0" prefWidth="513.0" text="MANAGE CUSTOMERS" />
+      <Button fx:id="stocksButton" layoutX="54.0" layoutY="188.0" mnemonicParsing="false" onAction="#handleStocksButtonAction" prefHeight="45.0" prefWidth="513.0" text="MANAGE STOCKS" />
+      <Button fx:id="functionsButton" layoutX="54.0" layoutY="296.0" mnemonicParsing="false" onAction="#handleFunctionsButtonAction" prefHeight="45.0" prefWidth="513.0" text="MANAGER FUNCTIONS" />
+      <Button fx:id="dterButton" layoutX="54.0" layoutY="241.0" mnemonicParsing="false" onAction="#handleDTERButtonAction" prefHeight="45.0" prefWidth="513.0" text="GENERATE DTER" />
+      <Label fx:id="dateLabel" layoutX="57.0" layoutY="88.0" prefHeight="21.0" prefWidth="243.0" />
+   </children>
+</AnchorPane>

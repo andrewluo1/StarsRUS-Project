@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="starsrusproject.RegisterController">
+   <children>
+      <Text layoutX="89.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Registration" textAlignment="CENTER" wrappingWidth="321.6708984375">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Button fx:id="registerButton" layoutX="46.0" layoutY="519.0" mnemonicParsing="false" onAction="#handleRegisterButtonAction" prefHeight="45.0" prefWidth="192.0" text="REGISTER" textFill="#0f6f19" />
+      <Button fx:id="cancelButton" layoutX="258.0" layoutY="519.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" prefHeight="45.0" prefWidth="192.0" text="CANCEL" textFill="#ff0101" />
+      <Text layoutX="48.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name* :" wrappingWidth="82.6708984375">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="48.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="State* : " wrappingWidth="82.6708984375">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="47.0" layoutY="299.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number * :" wrappingWidth="169.6708984375">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="46.0" layoutY="343.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail * :" wrappingWidth="104.6708984375">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="44.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tax ID * : " wrappingWidth="89.6708984375">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="41.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username* : " wrappingWidth="113.6708984375">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="40.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password * : " wrappingWidth="131.6708984375">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="nameField" layoutX="132.0" layoutY="114.0" prefHeight="31.0" prefWidth="312.0" />
+      <TextField fx:id="phoneField" layoutX="222.0" layoutY="276.0" prefHeight="31.0" prefWidth="214.0" />
+      <TextField fx:id="emailField" layoutX="134.0" layoutY="320.0" prefHeight="31.0" prefWidth="302.0" />
+      <TextField fx:id="taxidField" layoutX="153.0" layoutY="364.0" prefHeight="31.0" prefWidth="291.0" />
+      <TextField fx:id="usernameField" layoutX="171.0" layoutY="406.0" prefHeight="31.0" prefWidth="265.0" />
+      <TextField fx:id="passwordField" layoutX="171.0" layoutY="449.0" prefHeight="31.0" prefWidth="265.0" />
+      <ComboBox fx:id="stateComboBox" layoutX="283.0" layoutY="233.0" onAction="#handleStateChoice" prefWidth="150.0" />
+      <Label fx:id="errorLabel" alignment="CENTER" layoutX="84.0" layoutY="487.0" prefHeight="21.0" prefWidth="332.0" textFill="RED" />
+      <TextField fx:id="addressField" layoutX="142.0" layoutY="157.0" prefHeight="31.0" prefWidth="302.0" />
+      <Text layoutX="46.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address : " wrappingWidth="119.6708984375">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <TextField fx:id="ssnField" layoutX="142.0" layoutY="195.0" prefHeight="31.0" prefWidth="302.0" />
+      <Text layoutX="46.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SSN :" wrappingWidth="119.6708984375">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

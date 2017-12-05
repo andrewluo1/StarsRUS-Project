@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="starsrusproject.TraderInterfaceController">
+   <children>
+      <Text layoutX="53.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, " wrappingWidth="127.6708984375">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Label fx:id="cnameLabel" layoutX="168.0" layoutY="33.0" prefHeight="45.0" prefWidth="264.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="logoutButton" layoutX="436.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleLogoutButtonAction" prefHeight="45.0" prefWidth="116.0" text="LOGOUT" />
+      <Button fx:id="marketAccountButton" layoutX="44.0" layoutY="125.0" mnemonicParsing="false" onAction="#handleMarketAccountButtonAction" prefHeight="45.0" prefWidth="513.0" text="MANAGE MARKET ACCOUNT" />
+      <Button fx:id="stockAccountButton" layoutX="44.0" layoutY="178.0" mnemonicParsing="false" onAction="#handleStockAccountButtonAction" prefHeight="45.0" prefWidth="513.0" text="MANAGE STOCK ACCOUNT" />
+      <Button fx:id="stockMarketButton" layoutX="44.0" layoutY="234.0" mnemonicParsing="false" onAction="#handleStockMarketButton" prefHeight="45.0" prefWidth="513.0" text="VIEW STOCK MARKET" />
+      <Button fx:id="movieInfoButton" layoutX="44.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleMovieInfoButtonAction" prefHeight="45.0" prefWidth="513.0" text="MOVIE INFORMATION" />
+      <Label fx:id="dateLabel" layoutX="47.0" layoutY="78.0" prefHeight="21.0" prefWidth="243.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="starsrusproject.MainController">
+    <children>
+        <Button fx:id="traderButton" layoutX="50.0" layoutY="135.0" onAction="#handleTraderButtonAction" prefHeight="31.0" prefWidth="501.0" text="Trader Interface" />
+      <Button fx:id="managerButton" layoutX="50.0" layoutY="187.0" onAction="#handleManagerButtonAction" prefHeight="31.0" prefWidth="501.0" text="Manager Interface" />
+      <Text fill="#28661c" layoutX="56.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to StarsRUS Brokerage System" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="488.6708984375">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Text>
+    </children>
+   <cursor>
+      <Cursor fx:constant="W_RESIZE" />
+   </cursor>
+</AnchorPane>

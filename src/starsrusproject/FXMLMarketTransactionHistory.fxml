@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="starsrusproject.MarketTransactionHistoryController">
+   <children>
+      <TableView fx:id="marketTransactionTable" layoutX="27.0" layoutY="51.0" prefHeight="314.0" prefWidth="554.0">
+      </TableView>
+      <Text layoutX="27.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Market Account Transaction History" wrappingWidth="514.6708984375">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Button fx:id="backButton" layoutX="506.0" layoutY="17.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="31.0" prefWidth="72.0" text="BACK" />
+   </children>
+</AnchorPane>

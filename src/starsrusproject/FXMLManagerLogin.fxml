@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="starsrusproject.ManagerLoginController">
+   <children>
+      <Button fx:id="mainSystemButton" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#handleMainSystemButtonAction" prefHeight="40.0" prefWidth="123.0" text="MAIN SYSTEM" />
+      <Text layoutX="110.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manager Login" textAlignment="CENTER" wrappingWidth="381.6708984375">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Label layoutX="101.0" layoutY="170.0" prefHeight="30.0" prefWidth="111.0" text="Username : " textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="101.0" layoutY="216.0" prefHeight="30.0" prefWidth="111.0" text="Password : ">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameField" layoutX="215.0" layoutY="170.0" prefHeight="31.0" prefWidth="280.0" />
+      <PasswordField fx:id="passwordField" layoutX="215.0" layoutY="215.0" prefHeight="31.0" prefWidth="280.0" />
+      <Button fx:id="loginButton" layoutX="106.0" layoutY="267.0" mnemonicParsing="false" onAction="#handleLoginButtonAction" prefHeight="31.0" prefWidth="389.0" text="LOGIN" />
+      <Label fx:id="invalidLabel" layoutX="141.0" layoutY="129.0" prefHeight="21.0" prefWidth="332.0" textFill="RED" />
+   </children>
+</AnchorPane>

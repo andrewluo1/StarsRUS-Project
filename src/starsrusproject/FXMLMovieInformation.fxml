@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="starsrusproject.MovieInformationController">
+   <children>
+      <Text layoutX="14.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Movies" wrappingWidth="135.80859375">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Button fx:id="backButton" layoutX="514.0" layoutY="17.0" mnemonicParsing="false" onAction="#handleBackButtonAction" prefHeight="31.0" prefWidth="72.0" text="BACK" />
+      <Button fx:id="topMovieButton" layoutX="379.0" layoutY="318.0" mnemonicParsing="false" onAction="#handleTopMovieButtonAction" prefHeight="31.0" prefWidth="198.0" text="View Top Movies" />
+      <Text layoutX="23.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Top movies from : " wrappingWidth="146.3603515625">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="year1Field" layoutX="169.0" layoutY="344.0" prefHeight="31.0" prefWidth="81.0" />
+      <TextField fx:id="year2Field" layoutX="288.0" layoutY="344.0" prefHeight="31.0" prefWidth="81.0" />
+      <Text layoutX="259.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TO" />
+      <StackPane fx:id="stackPane" layoutX="19.0" layoutY="54.0" prefHeight="264.0" prefWidth="563.0">
+         <children>
+            <TableView fx:id="movieTable" prefHeight="200.0" prefWidth="200.0">
+            </TableView>
+            <Pane fx:id="reviewPane" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="reviewsTable" layoutX="14.0" layoutY="60.0" prefHeight="185.0" prefWidth="535.0">
+                  </TableView>
+                  <Text layoutX="14.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reviews for" wrappingWidth="146.3603515625">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="movieNameLabel" layoutX="145.0" layoutY="14.0" prefHeight="36.0" prefWidth="308.0">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="backToMoviesButton" layoutX="466.0" layoutY="17.0" mnemonicParsing="false" onAction="#handleBackToMoviesButtonAction" prefHeight="31.0" prefWidth="81.0" text="Movies" />
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+      <Button fx:id="allMovieButton" layoutX="379.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleAllMovieButtonAction" prefHeight="31.0" prefWidth="198.0" text="View All Movies" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="starsrusproject.MarketAccountController">
+   <children>
+      <Text layoutX="105.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account ID : " wrappingWidth="144.6708984375">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Label fx:id="accountIdLabel" layoutX="244.0" layoutY="41.0" prefHeight="38.0" prefWidth="167.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Button fx:id="homeButton" layoutX="445.0" layoutY="44.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleHomeButtonAction" prefHeight="33.0" prefWidth="107.0" text="HOME" />
+      <TextField fx:id="depositAmountField" layoutX="130.0" layoutY="164.0" prefHeight="38.0" prefWidth="212.0" />
+      <TextField fx:id="withdrawAmountField" layoutX="130.0" layoutY="219.0" prefHeight="38.0" prefWidth="212.0" />
+      <Button fx:id="depositButton" layoutX="366.0" layoutY="164.0" mnemonicParsing="false" onAction="#handleDepositButtonAction" prefHeight="38.0" prefWidth="184.0" text="DEPOSIT" />
+      <Button fx:id="withdrawButton" layoutX="366.0" layoutY="219.0" mnemonicParsing="false" onAction="#handleWithdrawButtonAction" prefHeight="38.0" prefWidth="184.0" text="WITHDRAW" />
+      <Button fx:id="transactionHistoryButton" layoutX="33.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleTransactionHIstoryButtonAction" prefHeight="45.0" prefWidth="519.0" text="VIEW TRANSACTION HISTORY" />
+      <Text fill="#1da402" layoutX="38.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Available Balance : " wrappingWidth="212.0">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Text>
+      <Label fx:id="accountBalanceLabel" layoutX="250.0" layoutY="82.0" prefHeight="38.0" prefWidth="167.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Text layoutX="105.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$" wrappingWidth="17.6708984375">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="105.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\$" wrappingWidth="17.6708984375">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Label fx:id="errorLabel" alignment="CENTER" layoutX="87.0" layoutY="129.0" prefHeight="21.0" prefWidth="443.0" textFill="#ee0000" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</AnchorPane>
