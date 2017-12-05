@@ -97,7 +97,7 @@ public class MarketAccountController implements Initializable {
                 statement = connection.prepareStatement(query);
                 statement.setString(1, "deposit");
                 statement.setInt (2,currentAid);
-                statement.setInt(3, Integer.parseInt(depositAmountField.getText()));
+                statement.setDouble(3, Double.parseDouble(depositAmountField.getText()));
                 statement.execute();
             } catch (SQLException e){
                 e.printStackTrace();
@@ -137,7 +137,7 @@ public class MarketAccountController implements Initializable {
                 statement = connection.prepareStatement(query);
                 statement.setString(1, "withdrawal");
                 statement.setInt (2,currentAid);
-                statement.setInt(3, Integer.parseInt(withdrawAmountField.getText()));
+                statement.setDouble(3, Double.parseDouble(withdrawAmountField.getText()));
                 statement.execute();
             } catch (SQLException e){
                 errorLabel.setText("Insufficient funds.");

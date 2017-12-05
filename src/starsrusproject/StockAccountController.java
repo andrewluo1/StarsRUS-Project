@@ -104,7 +104,7 @@ public class StockAccountController implements Initializable {
                 statement.setString(1, "sale");
                 statement.setInt (2,currentAid);
                 statement.setString(3, stockComboBox.getValue());
-                statement.setInt(4, Integer.parseInt(quantityField.getText()));
+                statement.setDouble(4, Double.parseDouble(quantityField.getText()));
                 statement.setString(5, ppComboBox.getValue());
                 statement.execute();
                 
@@ -258,7 +258,7 @@ public class StockAccountController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        Pattern decimalPattern = Pattern.compile("\\d*?");
+        Pattern decimalPattern = Pattern.compile("\\d*(\\.\\d{0,3})?");
 
         UnaryOperator<TextFormatter.Change> filter = c -> {
             if (decimalPattern.matcher(c.getControlNewText()).matches()) {

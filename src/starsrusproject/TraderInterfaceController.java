@@ -7,7 +7,10 @@ package starsrusproject;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -96,7 +99,12 @@ public class TraderInterfaceController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        try {
+            // TODO
+            currentUser.setCurrentDate();
+        } catch (SQLException ex) {
+            Logger.getLogger(TraderInterfaceController.class.getName()).log(Level.SEVERE, null, ex);
+        }
         cnameLabel.setText(currentUser.getcname());
         dateLabel.setText(currentUser.getCurrentDate());
     }    

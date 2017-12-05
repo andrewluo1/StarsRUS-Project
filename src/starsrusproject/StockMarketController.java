@@ -141,11 +141,12 @@ public class StockMarketController implements Initializable {
                 statement.setString(1, "purchase");
                 statement.setInt (2,currentAid);
                 statement.setString(3, stockComboBox.getValue());
-                statement.setInt(4, Integer.parseInt(quantityField.getText()));
+                statement.setDouble(4, Double.parseDouble(quantityField.getText()));
                 statement.execute();
                 errorLabel.setStyle("-fx-text-fill: green");
                 errorLabel.setText(quantityField.getText() + " " + stockComboBox.getValue() + " stocks successfully purchased.");
             } catch (SQLException e){
+                e.printStackTrace();
                 errorLabel.setStyle("-fx-text-fill: red");
                 errorLabel.setText("Insufficient funds.");
             } finally {
@@ -335,7 +336,7 @@ public class StockMarketController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         actorPane.setVisible(false);
-        Pattern decimalPattern = Pattern.compile("\\d*?");
+        Pattern decimalPattern = Pattern.compile("\\d*(\\.\\d{0,3})?");
 
         UnaryOperator<TextFormatter.Change> filter = c -> {
             if (decimalPattern.matcher(c.getControlNewText()).matches()) {

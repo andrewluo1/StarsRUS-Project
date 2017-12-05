@@ -79,6 +79,7 @@ public class RegisterController implements Initializable {
                 !taxidField.getText().trim().isEmpty() &&
                 !usernameField.getText().trim().isEmpty() &&
                 !passwordField.getText().trim().isEmpty()) {   
+            error = false;
             Connection connection = null;
             PreparedStatement statement = null;
 
@@ -124,6 +125,7 @@ public class RegisterController implements Initializable {
                 statement.execute();
             } catch (SQLException e){
                 error = true;
+                e.printStackTrace();
                 errorLabel.setText("Unable to register user.");
             } finally {
                 if (statement != null) {
