@@ -53,7 +53,7 @@ public class ManagerFunctionsController implements Initializable {
         Statement statement1 = null;
         PreparedStatement statement = null;
         Statement amountStatement;
-        double monthlyInterest = 0.0025;
+        double monthlyInterest = 0.03;
         try {
             Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
@@ -130,6 +130,11 @@ public class ManagerFunctionsController implements Initializable {
                 }
 
             }
+    }
+    
+    @FXML
+    void handleResetButtonAction(ActionEvent event) {
+        label.setText("TODO : Not implemented");
     }
     
     @FXML

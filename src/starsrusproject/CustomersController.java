@@ -41,7 +41,7 @@ import static starsrusproject.CurrentUser.USER;
 public class CustomersController implements Initializable {
     CurrentUser currentUser = CurrentUser.getInstance();
     private ObservableList<ObservableList> accounts;
-    private int currentTaxid;
+    private String currentTaxid;
     @FXML
     private Button monthlyReportButton;
 
@@ -99,7 +99,7 @@ public class CustomersController implements Initializable {
 
                 customers = FXCollections.observableArrayList();
                 String query = "select cname from Customers C, Accounts A where C.taxid = A.owner and A.aid in "
-                        + "(select S.aid from StockTransactions S, StockAccounts A where S.aid = A.aid group by S.aid having sum(S.numshares) > 1000) ";
+                        + "(select S.aid from StockTransactions S, StockAccounts A1 where S.aid = A1.aid group by S.aid having sum(S.numshares) > 1000) ";
                 statement = connection.createStatement();
                 ResultSet resultSet = statement.executeQuery(query);
 
@@ -190,7 +190,7 @@ public class CustomersController implements Initializable {
                 ResultSet resultSet1 = statement.executeQuery(query1);
 
                 while(resultSet1.next()) {
-                    currentTaxid = resultSet1.getInt("taxid");
+                    currentTaxid = resultSet1.getString("taxid");
                 }
 
                 String query = "select M.aid, M.type, M.balance, ' ' as symbol from MarketAccounts as M, Accounts as A where A.aid = M.aid and A.owner = '" + currentTaxid + "' union "
@@ -259,11 +259,11 @@ public class CustomersController implements Initializable {
                 ResultSet resultSet1 = statement.executeQuery(query1);
 
                 while(resultSet1.next()) {
-                    currentTaxid = resultSet1.getInt("taxid");
+                    currentTaxid = resultSet1.getString("taxid");
                 }
 
-                String query = "select M.tid, T.date, A.type as transaction_type, M.type as transaction, ' ' as symbol, M.amount from MarketTransactions as M, Accounts as A, Transactions as T where M.tid = T.tid and A.aid = M.aid and A.owner = '" + currentTaxid + "' union "
-                        + "select S.tid, Transactions.date, Accounts.type as transaction_type, S.type as transaction,  S.symbol, S.numshares as amount from StockTransactions as S, Accounts, Transactions where S.tid = Transactions.tid and Accounts.aid = S.aid and Accounts.owner = '" + currentTaxid + "'";
+                String query = "select C.cname, C.email, M.tid, T.date, A.type as transaction_type, M.type as transaction, ' ' as symbol, M.amount from MarketTransactions as M, Accounts as A, Transactions as T, Customers as C where M.tid = T.tid and A.aid = M.aid and C.taxid = '" + currentTaxid + "' and A.owner = '" + currentTaxid + "' union "
+                        + "select C1.cname, C1.email, S.tid, Transactions.date, Accounts.type as transaction_type, S.type as transaction,  S.symbol, S.numshares as amount from StockTransactions as S, Accounts, Customers as C1, Transactions where S.tid = Transactions.tid and Accounts.aid = S.aid and C1.taxid = '" + currentTaxid + "' and Accounts.owner = '" + currentTaxid + "'";
                 statement = connection.createStatement();
                 ResultSet resultSet = statement.executeQuery(query);
 
@@ -281,6 +281,7 @@ public class CustomersController implements Initializable {
                 }
 
                 while(resultSet.next()) {
+                    
                     ObservableList<String> row = FXCollections.observableArrayList();
 
                     for (int i = 1; i <= resultSet.getMetaData().getColumnCount(); i++) {
